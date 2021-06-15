@@ -10,7 +10,7 @@ This project is a starting point for a Login System application.
 - Clone or Download Project
 
 ### second Step
- - Locate the pubsec.yaml 
+ - Locate the pubspec.yaml 
 
 ### third Step
 - Run flutter pub get
