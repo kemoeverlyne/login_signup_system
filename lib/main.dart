@@ -12,13 +12,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Cleaning App',
-      theme: ThemeData(
-        textTheme:
-            GoogleFonts.josefinSansTextTheme(Theme.of(context).textTheme),
-        primarySwatch: Colors.blue,
-      ),
-      home: LoginScreen(),
-    );
+        title: 'Cleaning App',
+        theme: ThemeData(
+          textTheme:
+              GoogleFonts.josefinSansTextTheme(Theme.of(context).textTheme),
+          primarySwatch: Colors.blue,
+        ),
+        home: SignScreen());
   }
 }
