@@ -3,10 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:login_signup_system/clean.dart';
 import 'package:login_signup_system/screens/login_screen.dart';
-import 'package:http/http.dart' as http;
 
 class SignScreen extends StatefulWidget {
-  SignScreen({Key? key}) : super(key: key);
+  SignScreen({Key key}) : super(key: key);
 
   @override
   _SignScreenState createState() => _SignScreenState();
@@ -108,11 +107,11 @@ class _SignScreenState extends State<SignScreen> {
 
 class TextInputField extends StatelessWidget {
   const TextInputField({
-    required Key key,
-    required this.icon,
-    required this.hint,
-    required this.inputType,
-    required this.inputAction,
+    @required Key key,
+    @required this.icon,
+    this.hint,
+    this.inputType,
+    this.inputAction,
   }) : super(key: key);
 
   final IconData icon;
@@ -129,7 +128,7 @@ class TextInputField extends StatelessWidget {
           height: size.height * 0.08,
           width: size.width * 0.8,
           decoration: BoxDecoration(
-            color: Colors.grey[500]!.withOpacity(0.5),
+            color: Colors.grey[500].withOpacity(0.5),
             borderRadius: BorderRadius.circular(16),
           ),
           child: Center(
@@ -160,11 +159,11 @@ class TextInputField extends StatelessWidget {
 
 class PasswordInput extends StatelessWidget {
   const PasswordInput({
-    Key? key,
-    required this.icon,
-    required this.hint,
-    required this.inputType,
-    required this.inputAction,
+    Key key,
+    @required this.icon,
+    this.hint,
+    this.inputType,
+    this.inputAction,
   }) : super(key: key);
 
   final IconData icon;
@@ -181,7 +180,7 @@ class PasswordInput extends StatelessWidget {
             height: size.height * 0.08,
             width: size.width * 0.8,
             decoration: BoxDecoration(
-              color: Colors.grey[500]!.withOpacity(0.5),
+              color: Colors.grey[500].withOpacity(0.5),
               borderRadius: BorderRadius.circular(16),
             ),
             child: Center(
@@ -208,11 +207,11 @@ class PasswordInput extends StatelessWidget {
 
 class ConfirmPassword extends StatelessWidget {
   const ConfirmPassword({
-    Key? key,
-    required this.icon,
-    required this.hint,
-    required this.inputType,
-    required this.inputAction,
+    Key key,
+    this.icon,
+    this.hint,
+    this.inputType,
+    this.inputAction,
   }) : super(key: key);
 
   final IconData icon;
@@ -229,7 +228,7 @@ class ConfirmPassword extends StatelessWidget {
             height: size.height * 0.08,
             width: size.width * 0.8,
             decoration: BoxDecoration(
-              color: Colors.grey[500]!.withOpacity(0.5),
+              color: Colors.grey[500].withOpacity(0.5),
               borderRadius: BorderRadius.circular(16),
             ),
             child: Center(
@@ -256,11 +255,11 @@ class ConfirmPassword extends StatelessWidget {
 
 class UsernameInputField extends StatelessWidget {
   const UsernameInputField({
-    required Key key,
-    required this.icon,
-    required this.hint,
-    required this.inputType,
-    required this.inputAction,
+    @required Key key,
+    @required this.icon,
+    this.hint,
+    this.inputType,
+    this.inputAction,
   }) : super(key: key);
 
   final IconData icon;
@@ -277,7 +276,7 @@ class UsernameInputField extends StatelessWidget {
           height: size.height * 0.08,
           width: size.width * 0.8,
           decoration: BoxDecoration(
-            color: Colors.grey[500]!.withOpacity(0.5),
+            color: Colors.grey[500].withOpacity(0.5),
             borderRadius: BorderRadius.circular(16),
           ),
           child: Center(
@@ -307,7 +306,7 @@ class UsernameInputField extends StatelessWidget {
 }
 
 class RoundedButton extends StatelessWidget {
-  const RoundedButton({Key? key, required this.buttonName}) : super(key: key);
+  const RoundedButton({Key key, this.buttonName}) : super(key: key);
 
   final String buttonName;
 

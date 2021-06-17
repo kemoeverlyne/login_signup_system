@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:google_fonts/google_fonts.dart';
-import 'screens/screens.dart';
+import 'package:login_signup_system/screens/login_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -18,6 +18,6 @@ class MyApp extends StatelessWidget {
               GoogleFonts.josefinSansTextTheme(Theme.of(context).textTheme),
           primarySwatch: Colors.blue,
         ),
-        home: SignScreen());
+        home: LoginScreen());
   }
 }
